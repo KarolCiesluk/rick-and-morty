@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { getCharactersData } from "./API";
 import { CharactersData } from "./interfaces";
 
-const useCharactersData = () => {
+const useCharactersData = (currentPage: number) => {
   const [status, setStatus] = useState<"loading" | "success" | "error">("loading");
   const [charactersData, setCharactersData] = useState<CharactersData | null>(null);
 
@@ -13,7 +13,7 @@ const useCharactersData = () => {
 
     (async () => {
       try {
-        const data = await getCharactersData(signal);
+        const data = await getCharactersData(signal, currentPage);
 
         setCharactersData(data);
         setStatus("success");
@@ -26,7 +26,7 @@ const useCharactersData = () => {
     return () => {
       abortController.abort();
     };
-  }, []);
+  }, [currentPage]);
 
   return [status, charactersData] as const;
 };
