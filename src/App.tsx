@@ -1,25 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Character } from "./interfaces";
+import useCharactersData from "./useCharactersData";
 
 function App() {
+  const [status, charactersData] = useCharactersData();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header>
+        <h1>Rick and Morty app</h1>
       </header>
-    </div>
+      <main>
+        <h2>Character List</h2>
+        {!!charactersData &&
+          <ul>
+            {charactersData.results.map(({ id, image, name, status, species }: Character) => (
+              <li key={id}>
+                <img src={image} alt="" />
+                <h3>{name}</h3>
+                <p>Status: {status}</p>
+                <p>Species: {species}</p>
+              </li>
+            ))}
+          </ul>
+        }
+      </main>
+    </>
   );
 }
 
