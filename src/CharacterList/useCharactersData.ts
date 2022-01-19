@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+import { getCharactersData } from "./API";
 import { CharactersData } from "./interfaces";
 
 const useCharactersData = () => {
@@ -7,15 +8,13 @@ const useCharactersData = () => {
   const [charactersData, setCharactersData] = useState<CharactersData | null>(null);
 
   useEffect(() => {
+    const abortController = new AbortController();
+    const signal = abortController.signal;
+
     (async () => {
       try {
-        const response = await fetch("https://rickandmortyapi.com/api/character");
+        const data = await getCharactersData(signal);
 
-        if (!response.ok) {
-          throw new Error();
-        }
-
-        const data = await response.json();
         setCharactersData(data);
         setStatus("success");
       } catch (error) {
@@ -23,6 +22,10 @@ const useCharactersData = () => {
         console.error(error);
       }
     })();
+
+    return () => {
+      abortController.abort();
+    };
   }, []);
 
   return [status, charactersData] as const;
