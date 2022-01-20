@@ -1,11 +1,13 @@
+import { StyledHeader } from "./styled";
+
 interface HeaderProps {
   children: React.ReactNode;
 }
 
 const Header = ({ children }: HeaderProps) => (
-  <header>
+  <StyledHeader>
     <h1>{children}</h1>
-  </header>
+  </StyledHeader>
 );
 
 export default Header;

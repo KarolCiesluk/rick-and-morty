@@ -1,3 +1,5 @@
+import { Image, CharacterInfo } from "./styled";
+
 interface CharacterTileProps {
   image: string;
   name: string;
@@ -7,10 +9,10 @@ interface CharacterTileProps {
 
 const CharacterTile = ({ image, name, status, species }: CharacterTileProps) => (
   <article>
-    <img src={image} alt="" />
+    <Image src={image} alt="" />
     <h3>{name}</h3>
-    <p>Status: {status}</p>
-    <p>Species: {species}</p>
+    <CharacterInfo>Status: <b>{status}</b></CharacterInfo>
+    <CharacterInfo>Species: <b>{species}</b></CharacterInfo>
   </article>
 );
 

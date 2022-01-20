@@ -2,6 +2,7 @@ import CharacterTile from "./CharacterTile";
 import Content from "./Content";
 import { Character } from "./interfaces";
 import Pagination from "./Pagination";
+import { List, ListItem, Section, SectionTitle } from "./styled";
 import useCharactersData from "./useCharactersData";
 import { useQueryParameter } from "./useQueryParameter";
 
@@ -10,27 +11,27 @@ const CharacterList = () => {
   const [status, charactersData] = useCharactersData(currentPage);
 
   return (
-    <section>
+    <Section>
 
-      <h2>
+      <SectionTitle>
         Character List
-      </h2>
+      </SectionTitle>
 
       <Content status={status}>
         {!!charactersData &&
           <>
-            <ul>
+            <List>
               {charactersData.results.map(({ id, image, name, status, species }: Character) => (
-                <li key={id}>
+                <ListItem key={id}>
                   <CharacterTile
                     image={image}
                     name={name}
                     status={status}
                     species={species}
                   />
-                </li>
+                </ListItem>
               ))}
-            </ul>
+            </List>
             <Pagination
               lastPage={charactersData.info.pages}
               currentPage={currentPage}
@@ -39,7 +40,7 @@ const CharacterList = () => {
         }
       </Content>
 
-    </section>
+    </Section>
   );
 };
 

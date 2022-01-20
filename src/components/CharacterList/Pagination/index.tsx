@@ -1,4 +1,7 @@
+import { LeftArrow, PageNumber, PaginationButton, StyledPagination } from "./styled";
 import { useGoToPage } from "./useGoToPage";
+
+import { ReactComponent as Arrow } from "./arrow.svg";
 
 interface PaginationProps {
   lastPage: number;
@@ -25,21 +28,39 @@ const Pagination = ({ lastPage, currentPage }: PaginationProps) => {
   };
 
   return (
-    <nav>
-      <button disabled={currentPage === 1} onClick={goToFirstPage}>
-        First Page
-      </button>
-      <button disabled={currentPage === 1} onClick={goToPreviousPage}>
-        Previous Page
-      </button>
-      <span>{currentPage} of {lastPage}</span>
-      <button disabled={currentPage === lastPage} onClick={goToNextPage}>
-        Next Page
-      </button>
-      <button disabled={currentPage === lastPage} onClick={goToLastPage}>
-        Last Page
-      </button>
-    </nav>
+    <StyledPagination>
+
+      <PaginationButton
+        disabled={currentPage === 1}
+        onClick={goToFirstPage}
+      >
+        <LeftArrow /><LeftArrow />
+      </PaginationButton>
+
+      <PaginationButton
+        disabled={currentPage === 1}
+        onClick={goToPreviousPage}
+      >
+        <LeftArrow />
+      </PaginationButton>
+
+      <PageNumber>{currentPage} of {lastPage}</PageNumber>
+
+      <PaginationButton
+        disabled={currentPage === lastPage}
+        onClick={goToNextPage}
+      >
+        <Arrow />
+      </PaginationButton>
+
+      <PaginationButton
+        disabled={currentPage === lastPage}
+        onClick={goToLastPage}
+      >
+        <Arrow /><Arrow />
+      </PaginationButton>
+
+    </StyledPagination>
   );
 };
 

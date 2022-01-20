@@ -1,3 +1,7 @@
+import ErrorMessage from "./ErrorMessage";
+import { Loader } from "./styled";
+import { Wrapper } from "./Wrapper";
+
 interface ContentProps {
   status: string;
   children: React.ReactNode;
@@ -5,10 +9,14 @@ interface ContentProps {
 
 const Content = ({ status, children }: ContentProps) => {
   if (status === "loading") {
-    return <div>Loading…</div>;
+    return (
+      <Wrapper>
+        <Loader />
+      </Wrapper>
+    );
   }
   if (status === "error") {
-    return <div>Error!</div>
+    return <ErrorMessage />;
   }
   return <>{children}</>;
 };

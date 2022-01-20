@@ -1,11 +1,13 @@
+import { StyledFooter } from "./styled";
+
 interface FooterProps {
   footerText: string;
 }
 
 const Footer = ({ footerText }: FooterProps) => (
-  <footer>
+  <StyledFooter>
     <span>{footerText}</span>
-  </footer>
+  </StyledFooter>
 );
 
 export default Footer;
