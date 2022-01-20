@@ -1,6 +1,6 @@
 import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
-import CharacterList from "./CharacterList";
-import Header from "./CharacterList/Header";
+
+import { CharacterList, Header } from "../components";
 
 function App() {
   return (
