@@ -1,3 +1,4 @@
+import CharacterTile from "./CharacterTile";
 import Header from "./Header";
 import { Character } from "./interfaces";
 import Pagination from "./Pagination";
@@ -18,10 +19,12 @@ const CharacterList = () => {
             <ul>
               {charactersData.results.map(({ id, image, name, status, species }: Character) => (
                 <li key={id}>
-                  <img src={image} alt="" />
-                  <h3>{name}</h3>
-                  <p>Status: {status}</p>
-                  <p>Species: {species}</p>
+                  <CharacterTile
+                    image={image}
+                    name={name}
+                    status={status}
+                    species={species}
+                  />
                 </li>
               ))}
             </ul>
