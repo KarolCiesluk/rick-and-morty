@@ -1,5 +1,4 @@
 import CharacterTile from "./CharacterTile";
-import Header from "./Header";
 import { Character } from "./interfaces";
 import Pagination from "./Pagination";
 import useCharactersData from "./useCharactersData";
@@ -10,9 +9,7 @@ const CharacterList = () => {
   const [status, charactersData] = useCharactersData(currentPage);
 
   return (
-    <>
-      <Header>Rick and Morty app</Header>
-      <main>
+    <section>
         <h2>Character List</h2>
         {!!charactersData &&
           <>
@@ -34,8 +31,7 @@ const CharacterList = () => {
             />
           </>
         }
-      </main>
-    </>
+    </section>
   );
 };
 

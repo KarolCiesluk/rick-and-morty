@@ -25,7 +25,7 @@ const Pagination = ({ lastPage, currentPage }: PaginationProps) => {
   };
 
   return (
-    <div>
+    <nav>
       <button disabled={currentPage === 1} onClick={goToFirstPage}>
         First Page
       </button>
@@ -39,7 +39,7 @@ const Pagination = ({ lastPage, currentPage }: PaginationProps) => {
       <button disabled={currentPage === lastPage} onClick={goToLastPage}>
         Last Page
       </button>
-    </div>
+    </nav>
   );
 };
 

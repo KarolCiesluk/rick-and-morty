@@ -1,19 +1,24 @@
 import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
 import CharacterList from "./CharacterList";
+import Header from "./CharacterList/Header";
 
 function App() {
   return (
     <HashRouter>
-      <Routes>
-        <Route
-          path="characters"
-          element={<CharacterList />}
-        />
-        <Route
+      <Header>Rick and Morty app</Header>
+
+      <main>
+        <Routes>
+          <Route
+            path="characters"
+            element={<CharacterList />}
+          />
+          <Route
             path="*"
             element={<Navigate to="characters" />}
           />
-      </Routes>
+        </Routes>
+      </main>
     </HashRouter>
   );
 }

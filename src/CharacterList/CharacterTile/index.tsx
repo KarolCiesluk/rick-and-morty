@@ -6,12 +6,12 @@ interface CharacterTileProps {
 }
 
 const CharacterTile = ({ image, name, status, species }: CharacterTileProps) => (
-  <section>
+  <article>
     <img src={image} alt="" />
     <h3>{name}</h3>
     <p>Status: {status}</p>
     <p>Species: {species}</p>
-  </section>
+  </article>
 );
 
 export default CharacterTile;
