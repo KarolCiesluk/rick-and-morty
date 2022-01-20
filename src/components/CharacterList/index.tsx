@@ -1,4 +1,5 @@
 import CharacterTile from "./CharacterTile";
+import Content from "./Content";
 import { Character } from "./interfaces";
 import Pagination from "./Pagination";
 import useCharactersData from "./useCharactersData";
@@ -15,26 +16,28 @@ const CharacterList = () => {
         Character List
       </h2>
 
-      {!!charactersData &&
-        <>
-          <ul>
-            {charactersData.results.map(({ id, image, name, status, species }: Character) => (
-              <li key={id}>
-                <CharacterTile
-                  image={image}
-                  name={name}
-                  status={status}
-                  species={species}
-                />
-              </li>
-            ))}
-          </ul>
-          <Pagination
-            lastPage={charactersData.info.pages}
-            currentPage={currentPage}
-          />
-        </>
-      }
+      <Content status={status}>
+        {!!charactersData &&
+          <>
+            <ul>
+              {charactersData.results.map(({ id, image, name, status, species }: Character) => (
+                <li key={id}>
+                  <CharacterTile
+                    image={image}
+                    name={name}
+                    status={status}
+                    species={species}
+                  />
+                </li>
+              ))}
+            </ul>
+            <Pagination
+              lastPage={charactersData.info.pages}
+              currentPage={currentPage}
+            />
+          </>
+        }
+      </Content>
 
     </section>
   );
