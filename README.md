@@ -1,6 +1,43 @@
-# Getting Started with Create React App
+# Rick and Morty app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Rick and Morty logo](./rick-and-morty-logo.jpg)
+
+## Table of Contents
+1. [Demo](#demo-on-github-pages)
+2. [Description](#description)
+3. [Technologies](#technologies)
+4. [Available Scripts](#available-scripts)
+
+## Demo on Github pages
+
+https://karolciesluk.github.io/rick-and-morty/
+
+## Description
+
+The Rick and Morty app is an app based on [The Rick and Morty REST_API](https://rickandmortyapi.com/) that allows you to see a list of characters from the Rick and Morty animated sitcom.
+
+At the bottom of the page there is a pagination component which you can use to navigate between the pages. Each page shows up to 20 characters.
+
+The Rick and Morty app was made as a recruitment task for Junior Frontend Developer position.
+
+## Technologies
+
+- HTML
+- Typescript
+- React.js
+- create-react-app
+- React Hooks
+- Babel
+- JSX
+- Fetch API
+- Styled-Components
+- Styled-Normalized
+- CSS Flexbox
+- CSS Grid
+- Media Queries
+- React Router v6
+- Jest
+- Enzyme
 
 ## Available Scripts
 
