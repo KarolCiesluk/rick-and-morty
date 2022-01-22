@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination tests renders ok 1`] = `
+<nav
+  className="sc-bdvvtL zVTrh"
+>
+  <button
+    className="sc-dkPtRN cFPYvG"
+    disabled={true}
+    onClick={[Function]}
+  >
+    <svg
+      className="sc-gsDKAQ huTkWC"
+    >
+      arrow.svg
+    </svg>
+    <svg
+      className="sc-gsDKAQ huTkWC"
+    >
+      arrow.svg
+    </svg>
+  </button>
+  <button
+    className="sc-dkPtRN cFPYvG"
+    disabled={true}
+    onClick={[Function]}
+  >
+    <svg
+      className="sc-gsDKAQ huTkWC"
+    >
+      arrow.svg
+    </svg>
+  </button>
+  <span
+    className="sc-hKwDye NlkbS"
+  >
+    1
+     of 
+    826
+  </span>
+  <button
+    className="sc-dkPtRN jYQpi"
+    disabled={false}
+    onClick={[Function]}
+  >
+    <svg>
+      arrow.svg
+    </svg>
+  </button>
+  <button
+    className="sc-dkPtRN jYQpi"
+    disabled={false}
+    onClick={[Function]}
+  >
+    <svg>
+      arrow.svg
+    </svg>
+    <svg>
+      arrow.svg
+    </svg>
+  </button>
+</nav>
+`;

@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders ok 1`] = `
+<div
+  className="sc-dkPtRN kcwarw"
+>
+  <header
+    className="sc-gsDKAQ eGePnG"
+  >
+    <h1>
+      Rick and Morty app
+    </h1>
+  </header>
+  <main>
+    <div>
+      Snapshot test
+    </div>
+  </main>
+  <footer
+    className="sc-bdvvtL boMJDT"
+  >
+    <span>
+      © 2022 | Coded by Karol Cieśluk
+    </span>
+  </footer>
+</div>
+`;

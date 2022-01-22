@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Content component testing renders ErrorMessage when status is 'error' 1`] = `
+<div
+  className="sc-bdvvtL bKhKNO"
+>
+  <svg
+    className="sc-dkPtRN hbRvxX"
+  >
+    error.svg
+  </svg>
+  <p
+    className="sc-hKwDye jeovgI"
+  >
+    Ooops! Something went wrong…
+  </p>
+  <p
+    className="sc-hKwDye jeovgI"
+  >
+     Please check your network connection
+    <br />
+    and try again
+  </p>
+  <button
+    className="sc-gsDKAQ frLprV"
+    onClick={[Function]}
+  >
+    Refresh
+  </button>
+</div>
+`;
+
+exports[`Content component testing renders Loader when status is 'loading' 1`] = `
+<div
+  className="sc-bdvvtL bKhKNO"
+>
+  <svg
+    className="sc-eCImPb eFhaSB"
+  >
+    loader.svg
+  </svg>
+</div>
+`;
+
+exports[`Content component testing renders children prop when status is 'success' 1`] = `
+<div>
+  Snapshot test
+</div>
+`;

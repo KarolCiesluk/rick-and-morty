@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharacterTile tests renders ok 1`] = `
+<article>
+  <img
+    alt=""
+    className="sc-bdvvtL eukWAO"
+    src="https://rickandmortyapi.com/api/character/avatar/81.jpeg"
+  />
+  <h3>
+    Crocubot
+  </h3>
+  <p
+    className="sc-gsDKAQ fiIEyU"
+  >
+    Status: 
+    <b>
+      Dead
+    </b>
+  </p>
+  <p
+    className="sc-gsDKAQ fiIEyU"
+  >
+    Species: 
+    <b>
+      Animal
+    </b>
+  </p>
+</article>
+`;
