@@ -13,6 +13,7 @@ describe("Content component testing", () => {
       ).toJSON();
     expect(tree).toMatchSnapshot();
   });
+
   it("renders Loader when status is 'loading'", () => {
     const tree = renderer
       .create(
@@ -22,6 +23,7 @@ describe("Content component testing", () => {
       ).toJSON();
     expect(tree).toMatchSnapshot();
   });
+
   it("renders children prop when status is 'success'", () => {
     const tree = renderer
       .create(

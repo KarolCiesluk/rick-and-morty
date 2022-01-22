@@ -6,8 +6,15 @@ const ErrorMessage = () => {
   return (
     <Wrapper>
       <ErrorIcon />
-      <Paragraph>Ooops! Something went&nbsp;wrong…</Paragraph>
-      <Paragraph> Please check your network connection<br />and try again</Paragraph>
+
+      <Paragraph>
+        Ooops! Something went&nbsp;wrong…
+      </Paragraph>
+
+      <Paragraph>
+        Please check your network connection<br />and try again
+      </Paragraph>
+
       <RefreshButton />
     </Wrapper >
   );

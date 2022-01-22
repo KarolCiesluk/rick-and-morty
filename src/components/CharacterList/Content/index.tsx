@@ -1,6 +1,6 @@
 import ErrorMessage from "./ErrorMessage";
-import { Loader } from "./styled";
 import { Wrapper } from "./Wrapper";
+import { Loader } from "./styled";
 
 interface ContentProps {
   status: string;

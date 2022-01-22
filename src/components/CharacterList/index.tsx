@@ -1,10 +1,10 @@
 import CharacterTile from "./CharacterTile";
 import Content from "./Content";
-import { Character } from "./interfaces";
 import Pagination from "./Pagination";
-import { List, ListItem, Section, SectionTitle } from "./styled";
 import useCharactersData from "./useCharactersData";
 import { useQueryParameter } from "./useQueryParameter";
+import { Character } from "./API";
+import { List, ListItem, Section, SectionTitle } from "./styled";
 
 const CharacterList = () => {
   const currentPage = parseInt(useQueryParameter("page") || "1");
@@ -21,7 +21,13 @@ const CharacterList = () => {
         {!!charactersData &&
           <>
             <List>
-              {charactersData.results.map(({ id, image, name, status, species }: Character) => (
+              {charactersData.results.map(({
+                id,
+                image,
+                name,
+                status,
+                species
+              }: Character) => (
                 <ListItem key={id}>
                   <CharacterTile
                     image={image}

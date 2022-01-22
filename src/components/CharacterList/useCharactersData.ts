@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { getCharactersData } from "./API";
-import { CharactersData } from "./interfaces";
+import { CharactersData, getCharactersData } from "./API";
 
 const useCharactersData = (currentPage: number) => {
   const [status, setStatus] = useState<"loading" | "success" | "error">("loading");

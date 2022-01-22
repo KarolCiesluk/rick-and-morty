@@ -1,7 +1,11 @@
-import { LeftArrow, PageNumber, PaginationButton, StyledPagination } from "./styled";
 import { useGoToPage } from "./useGoToPage";
-
 import { ReactComponent as Arrow } from "./arrow.svg";
+import {
+  LeftArrow,
+  PageNumber,
+  PaginationButton,
+  StyledPagination
+} from "./styled";
 
 interface PaginationProps {
   lastPage: number;
