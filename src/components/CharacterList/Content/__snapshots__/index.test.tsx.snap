@@ -17,7 +17,7 @@ exports[`Content component testing renders ErrorMessage when status is 'error' 1
   <p
     className="sc-hKwDye jeovgI"
   >
-     Please check your network connection
+    Please check your network connection
     <br />
     and try again
   </p>
