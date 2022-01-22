@@ -12,3 +12,5 @@ export const StyledHeader = styled.header`
     font-size: 20px;
   }
 `;
+
+StyledHeader.displayName = "header";

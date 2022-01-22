@@ -7,3 +7,5 @@ export const Image = styled.img`
 export const CharacterInfo = styled.p`
   color: #525252;
 `;
+
+Image.displayName = "img";

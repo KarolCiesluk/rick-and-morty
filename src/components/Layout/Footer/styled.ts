@@ -7,3 +7,5 @@ export const StyledFooter = styled.footer`
   padding: 18px 4px;
   margin-top: 40px;
 `;
+
+StyledFooter.displayName = "footer";
